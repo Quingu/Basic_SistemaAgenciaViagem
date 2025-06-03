@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pagamento - Agência Viagens Dream</title>
+    <link rel="stylesheet" href="./style/style.css">
+</head>
+<body>
+<header>
+    <div class="container">
+        <img src="./images/logoVCV.png" alt="Logo VCV" style="height: 60px;">
+        <h1>VCV - Viagens com Vantagens</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="pacotes.html">Pacotes</a></li>
+                <li><a href="reservar.html">Reservar</a></li>
+                <li><a href="minhas-reservas.html">Minhas Reservas</a></li>
+                <li><a href="cadastro.html">Cadastre-se</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main class="container">
+    <section class="payment-section">
+        <h2>Realizar Pagamento</h2>
+
+        <div class="resumo-reserva">
+            <h3>Resumo da Reserva</h3>
+            <div id="resumo-reserva-detalhes">
+                <!-- Será preenchido via JavaScript -->
+            </div>
+        </div>
+
+        <form id="pagamento-form" class="payment-form">
+            <input type="hidden" id="reserva-id" name="reservaId">
+            <input type="hidden" id="valor-total" name="valor">
+
+            <div class="form-group">
+                <label for="metodo-pagamento">Método de Pagamento:</label>
+                <select id="metodo-pagamento" name="metodo" required>
+                    <option value="">Selecione...</option>
+                    <option value="CARTAO">Cartão de Crédito</option>
+                    <option value="BOLETO">Boleto Bancário</option>
+                    <option value="PIX">PIX</option>
+                </select>
+            </div>
+
+            <div id="cartao-fields" class="payment-method-fields" style="display: none;">
+                <h3>Dados do Cartão</h3>
+                <div class="form-group">
+                    <label for="numero-cartao">Número do Cartão:</label>
+                    <input type="text" id="numero-cartao" name="numeroCartao" placeholder="0000 0000 0000 0000">
+                </div>
+                <div class="form-group">
+                    <label for="nome-cartao">Nome no Cartão:</label>
+                    <input type="text" id="nome-cartao" name="nomeCartao" placeholder="Como no cartão">
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="validade-cartao">Validade:</label>
+                        <input type="text" id="validade-cartao" name="validadeCartao" placeholder="MM/AA">
+                    </div>
+                    <div class="form-group">
+                        <label for="cvv-cartao">CVV:</label>
+                        <input type="text" id="cvv-cartao" name="cvvCartao" placeholder="123">
+                    </div>
+                </div>
+            </div>
+
+            <div id="boleto-message" class="payment-method-message" style="display: none;">
+                <p>O boleto será gerado após a confirmação do pagamento.</p>
+            </div>
+
+            <div id="pix-message" class="payment-method-message" style="display: none;">
+                <p>O QR Code para pagamento via PIX será exibido após a confirmação.</p>
+            </div>
+
+            <div class="form-group total-group">
+                <label>Valor Total:</label>
+                <span id="valor-display" class="valor-total">R$ 0,00</span>
+            </div>
+
+            <button type="submit" class="btn submit-btn">Confirmar Pagamento</button>
+        </form>
+    </section>
+</main>
+
+<footer>
+    <div class="container">
+        <p>&copy; 2023 Viagens Com Vantagens. Todos os direitos reservados.</p>
+    </div>
+</footer>
+
+<script src="./script/pagamento.js"></script>
+</body>
+</html>
