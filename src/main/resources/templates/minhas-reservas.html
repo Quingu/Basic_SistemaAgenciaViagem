@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Minhas Reservas - Agência Viagens Dream</title>
+    <link rel="stylesheet" href="./style/style.css">
+</head>
+<body>
+<header>
+    <div class="container">
+        <img src="./images/logoVCV.png" alt="Logo VCV" style="height: 60px;">
+        <h1>VCV - Viagens com Vantagens</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="pacotes.html">Pacotes</a></li>
+                <li><a href="reservar.html">Reservar</a></li>
+                <li><a href="minhas-reservas.html">Minhas Reservas</a></li>
+                <li><a href="cadastro.html">Cadastre-se</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main class="container">
+    <section>
+        <h2>Minhas Reservas</h2>
+        <div class="form-group">
+            <label for="cliente-id-reservas">Seu ID de Cliente:</label>
+            <input type="number" id="cliente-id-reservas" name="cliente-id-reservas">
+            <button id="buscar-reservas" class="btn">Buscar Reservas</button>
+        </div>
+
+        <div id="reservas-container">
+            <!-- As reservas serão carregadas via JavaScript -->
+            <p>Informe seu ID de cliente e clique em "Buscar Reservas"</p>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <div class="container">
+        <p>&copy; 2023 Viagens Com Vantagens. Todos os direitos reservados.</p>
+    </div>
+</footer>
+
+<script src="./script/script.js"></script>
+</body>
+</html>

@@ -1,0 +1,17 @@
+body {
+    margin: 0;
+    background-color: #F0F9FF;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    color: #1E3A8A;
+}
+
+table, th, td {
+    border: 1px solid #93C5FD;
+    padding: 8px;
+    text-align: left;
+}
+
+th {
+    background-color: #3B82F6;
+    color: white;
+}

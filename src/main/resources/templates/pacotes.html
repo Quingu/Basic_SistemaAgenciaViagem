@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pacotes - Agência Viagens Dream</title>
+    <link rel="stylesheet" href="./style/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+</head>
+<body>
+<header>
+    <div class="container">
+        <img src="./images/logoVCV.png" alt="Logo VCV" style="height: 60px;">
+        <h1>VCV - Viagens com Vantagens</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="pacotes.html" class="active">Pacotes</a></li>
+                <li><a href="reservar.html">Reservar</a></li>
+                <li><a href="minhas-reservas.html">Minhas Reservas</a></li>
+                <li><a href="cadastro.html">Cadastre-se</a></li>
+            </ul>
+        </nav>
+    </div>
+</header>
+
+<main class="container">
+    <section class="pacotes-section">
+        <h2 class="section-title">Nossos Pacotes de Viagem</h2>
+
+        <div class="filtros-container">
+            <div class="filtro">
+                <label for="filtro-destino">Destino:</label>
+                <input type="text" id="filtro-destino" placeholder="Buscar destino...">
+            </div>
+            <div class="filtro">
+                <label for="filtro-preco">Preço máximo:</label>
+                <select id="filtro-preco">
+                    <option value="10000">Todos</option>
+                    <option value="3000">Até R$ 3.000</option>
+                    <option value="5000">Até R$ 5.000</option>
+                    <option value="8000">Até R$ 8.000</option>
+                </select>
+            </div>
+            <div class="filtro">
+                <label for="filtro-duracao">Duração:</label>
+                <select id="filtro-duracao">
+                    <option value="20">Todas</option>
+                    <option value="5">Até 5 dias</option>
+                    <option value="7">Até 7 dias</option>
+                    <option value="10">Até 10 dias</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="pacotes-container" id="pacotes-list">
+            <!-- Os pacotes serão carregados via JavaScript -->
+            <div class="loading-spinner">
+                <div class="spinner"></div>
+                <p>Carregando nossos melhores pacotes...</p>
+            </div>
+        </div>
+    </section>
+</main>
+
+<footer>
+    <div class="container">
+        <p>&copy; 2023 Viagens Com Vantagens. Todos os direitos reservados.</p>
+    </div>
+</footer>
+
+<script src="./script/script.js"></script>
+</body>
+</html>
