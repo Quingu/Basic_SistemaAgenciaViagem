@@ -58,7 +58,7 @@ spring.jpa.hibernate.ddl-auto=update
 Aplicação: http://localhost:8080
 Interface HTML: embutida em /templates
 
-### Boas Práticas Adotadas
+### ✅ Boas Práticas Adotadas
 Separação de responsabilidades (SRP)
 
 Estruturação MVC
